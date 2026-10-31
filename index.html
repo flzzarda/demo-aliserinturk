@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171613">
+  <meta name="description" content="Adana Kebapçı Ali Serintürk — Adana kebabı ve ızgara lezzetleri. Telefon ve konum bilgilerine ulaşın.">
+  <meta property="og:title" content="Adana Kebapçı Ali Serintürk | Adana">
+  <meta property="og:description" content="Adana kebabı ve ızgara lezzetleri. Bizi arayın veya yol tarifi alın.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/kebap-hero.png">
+  <title>Adana Kebapçı Ali Serintürk | Adana</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23171613'/%3E%3Cpath d='M20 65 77 27' stroke='%23d97736' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M28 70c8-15 16-22 25-27 8-5 16-7 25-8' fill='none' stroke='%23f3e9d7' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #171613;
+      --ink-soft: #211f1b;
+      --ink-card: #28251f;
+      --cream: #f2eadb;
+      --cream-dim: #c8bead;
+      --muted: #a9a092;
+      --accent: #d97736;
+      --accent-light: #f0a15e;
+      --line: rgba(242, 234, 219, .13);
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; color: var(--cream); background: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .demo-strip { min-height: 31px; display: flex; justify-content: center; align-items: center; padding: 6px 16px; background: #33251c; color: #f0c6a0; text-align: center; font-size: 11px; letter-spacing: .11em; text-transform: uppercase; }
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(23, 22, 19, .92); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
+    .nav { position: relative; min-height: 76px; display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-mark { width: 43px; height: 43px; flex: 0 0 43px; display: grid; place-items: center; border: 1px solid rgba(217,119,54,.55); border-radius: 50%; color: var(--accent-light); font-family: Georgia, serif; font-size: 22px; }
+    .brand-text { display: grid; line-height: 1.15; }
+    .brand-text strong { font-family: Georgia, "Times New Roman", serif; font-size: 16px; letter-spacing: .02em; font-weight: 600; }
+    .brand-text span { margin-top: 5px; color: var(--muted); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 30px; color: var(--cream-dim); font-size: 13px; }
+    .nav-links a { transition: color .2s ease; }
+    .nav-links a:hover { color: var(--accent-light); }
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .btn { min-height: 48px; display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 0 20px; border: 1px solid transparent; border-radius: 4px; font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: #1b1712; }
+    .btn-primary:hover { background: var(--accent-light); }
+    .btn-outline { border-color: rgba(242,234,219,.3); color: var(--cream); }
+    .btn-outline:hover { border-color: var(--accent-light); }
+    .btn svg { width: 16px; height: 16px; }
+    .menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 4px; color: var(--cream); background: transparent; cursor: pointer; }
+    .menu-toggle svg { width: 21px; height: 21px; }
+
+    .hero { position: relative; overflow: hidden; min-height: 650px; display: flex; align-items: center; isolation: isolate; }
+    .hero::before { content: ""; position: absolute; z-index: -2; inset: 0 0 0 40%; background: linear-gradient(90deg, var(--ink) 0%, rgba(23,22,19,.75) 15%, rgba(23,22,19,.1) 53%), linear-gradient(0deg, rgba(23,22,19,.62), transparent 44%), url("assets/kebap-hero.png") center / cover no-repeat; }
+    .hero::after { content: ""; position: absolute; z-index: -1; width: 470px; height: 470px; right: -230px; top: 40px; border: 1px solid rgba(217,119,54,.25); border-radius: 50%; box-shadow: 0 0 0 34px rgba(217,119,54,.035), 0 0 0 68px rgba(217,119,54,.025); }
+    .hero-content { width: min(610px, 60%); padding: 100px 0 108px; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; color: var(--accent-light); font-size: 11px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--accent); }
+    h1, h2, h3, p { margin-top: 0; }
+    .hero h1 { margin: 24px 0 20px; max-width: 640px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(52px, 6.2vw, 84px); font-weight: 500; line-height: .99; letter-spacing: -.045em; }
+    .hero h1 em { color: var(--accent-light); font-weight: 500; }
+    .hero-copy { max-width: 440px; margin-bottom: 30px; color: var(--cream-dim); font-size: 16px; line-height: 1.8; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-foot { display: flex; align-items: center; gap: 14px; margin-top: 46px; color: var(--muted); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+    .hero-foot::before { content: ""; width: 42px; height: 1px; background: var(--accent); }
+
+    .quick-info { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #1e1c18; }
+    .quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .quick-item { min-height: 104px; display: flex; align-items: center; gap: 17px; padding: 20px 28px; border-right: 1px solid var(--line); }
+    .quick-item:first-child { padding-left: 0; }
+    .quick-item:last-child { border-right: 0; }
+    .quick-icon { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; border: 1px solid rgba(217,119,54,.35); color: var(--accent-light); border-radius: 50%; }
+    .quick-icon svg { width: 19px; height: 19px; }
+    .quick-item strong { display: block; font-family: Georgia, serif; font-size: 17px; font-weight: 500; }
+    .quick-item span { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+
+    .section { padding: 112px 0; }
+    .section-heading { max-width: 680px; margin-bottom: 48px; }
+    .section-heading h2 { margin: 16px 0 14px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(38px, 4vw, 56px); font-weight: 500; line-height: 1.08; letter-spacing: -.035em; }
+    .section-heading p { max-width: 570px; margin-bottom: 0; color: var(--muted); font-size: 15px; }
+    .menu-section { background: var(--cream); color: var(--ink); }
+    .menu-section .eyebrow { color: #a85124; }
+    .menu-section .section-heading p { color: #696257; }
+    .menu-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .menu-card { min-height: 245px; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 25px 22px; overflow: hidden; background: #e8decc; border: 1px solid rgba(23,22,19,.08); }
+    .menu-card::after { content: ""; position: absolute; width: 150px; height: 150px; right: -55px; top: -55px; border: 1px solid rgba(168,81,36,.22); border-radius: 50%; box-shadow: 0 0 0 17px rgba(168,81,36,.045), 0 0 0 34px rgba(168,81,36,.035); }
+    .menu-number { color: #a85124; font-family: Georgia, serif; font-size: 13px; }
+    .menu-card h3 { max-width: 180px; margin: 0 0 8px; font-family: Georgia, serif; font-size: 25px; font-weight: 500; line-height: 1.12; }
+    .menu-card p { max-width: 190px; margin: 0; color: #71685c; font-size: 12px; line-height: 1.55; }
+    .menu-note { margin: 18px 0 0; color: #776e62; font-size: 11px; }
+
+    .story { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 90px; }
+    .story-visual { position: relative; min-height: 490px; }
+    .story-photo { position: absolute; inset: 0 42px 35px 0; background: url("assets/kebap-hero.png") center / cover no-repeat; }
+    .story-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,22,19,.3), transparent 65%); }
+    .story-stamp { position: absolute; right: 0; bottom: 0; width: 180px; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 22px; background: var(--accent); color: #20170f; text-align: center; }
+    .story-stamp strong { font-family: Georgia, serif; font-size: 29px; font-weight: 500; line-height: 1; }
+    .story-stamp span { margin-top: 10px; font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
+    .story-copy h2 { margin: 16px 0 20px; font-family: Georgia, serif; font-size: clamp(39px, 4vw, 55px); font-weight: 500; line-height: 1.08; letter-spacing: -.035em; }
+    .story-copy p { color: var(--muted); font-size: 15px; }
+    .story-points { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 30px 0 32px; }
+    .story-point { display: flex; align-items: center; gap: 10px; color: var(--cream-dim); font-size: 12px; }
+    .story-point::before { content: "✦"; color: var(--accent-light); font-size: 14px; }
+
+    .contact-section { position: relative; overflow: hidden; background: #211e19; }
+    .contact-section::after { content: ""; position: absolute; width: 480px; height: 480px; right: -200px; bottom: -280px; border: 1px solid rgba(217,119,54,.23); border-radius: 50%; box-shadow: 0 0 0 36px rgba(217,119,54,.04), 0 0 0 72px rgba(217,119,54,.025); pointer-events: none; }
+    .contact-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: start; }
+    .contact-copy h2 { margin: 16px 0 18px; font-family: Georgia, serif; font-size: clamp(40px, 4.3vw, 58px); font-weight: 500; line-height: 1.05; letter-spacing: -.04em; }
+    .contact-copy p { max-width: 400px; color: var(--muted); font-size: 14px; }
+    .contact-cards { display: grid; gap: 12px; }
+    .contact-card { display: flex; align-items: flex-start; gap: 18px; padding: 23px; border: 1px solid var(--line); background: rgba(255,255,255,.025); }
+    .contact-card .quick-icon { width: 38px; height: 38px; flex-basis: 38px; }
+    .contact-card small { display: block; margin-bottom: 5px; color: var(--accent-light); font-size: 9px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .contact-card strong { display: block; font-size: 15px; font-weight: 600; }
+    .contact-card p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+    .contact-card a.inline-link { display: inline-block; margin-top: 9px; color: var(--accent-light); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+    .map-note { margin-top: 12px; color: #8f8679; font-size: 10px; }
+
+    .footer { padding: 30px 0 90px; border-top: 1px solid var(--line); background: var(--ink); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .footer-copy { color: var(--muted); font-size: 11px; }
+    .footer-links { display: flex; gap: 20px; color: var(--cream-dim); font-size: 11px; }
+    .footer-links a:hover { color: var(--accent-light); }
+    .mobile-bar { display: none; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    @media (max-width: 980px) {
+      .nav-links { gap: 18px; }
+      .nav-actions .btn { padding-inline: 14px; }
+      .hero { min-height: 590px; }
+      .hero-content { width: 65%; }
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+      .story { gap: 45px; }
+      .contact-layout { gap: 40px; }
+    }
+    @media (max-width: 720px) {
+      html { scroll-padding-top: 75px; }
+      .container { width: min(100% - 36px, var(--max)); }
+      .demo-strip { min-height: 34px; font-size: 9px; letter-spacing: .06em; }
+      .nav { min-height: 68px; }
+      .brand-mark { width: 39px; height: 39px; flex-basis: 39px; }
+      .brand-text strong { font-size: 14px; }
+      .brand-text span { font-size: 8px; }
+      .nav-actions > .btn { display: none; }
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-links { position: absolute; top: 100%; left: -18px; right: -18px; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 18px 18px; border-bottom: 1px solid var(--line); background: #1a1916; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 15px 4px; border-bottom: 1px solid var(--line); font-size: 14px; }
+      .nav-links a:last-child { border-bottom: 0; }
+      .hero { min-height: 670px; align-items: flex-end; }
+      .hero::before { inset: 0; background: linear-gradient(0deg, var(--ink) 0%, rgba(23,22,19,.91) 23%, rgba(23,22,19,.25) 75%, rgba(23,22,19,.12)), url("assets/kebap-hero.png") 58% 28% / cover no-repeat; }
+      .hero::after { width: 270px; height: 270px; right: -180px; top: 65px; }
+      .hero-content { width: 100%; padding: 260px 0 55px; }
+      .hero h1 { max-width: 470px; font-size: clamp(47px, 13vw, 66px); }
+      .hero-copy { max-width: 410px; font-size: 14px; }
+      .hero-foot { margin-top: 28px; }
+      .quick-grid { grid-template-columns: 1fr; padding: 8px 0; }
+      .quick-item, .quick-item:first-child { min-height: 76px; padding: 12px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .quick-item:last-child { border-bottom: 0; }
+      .quick-icon { width: 38px; height: 38px; flex-basis: 38px; }
+      .quick-item strong { font-size: 16px; }
+      .section { padding: 78px 0; }
+      .section-heading { margin-bottom: 30px; }
+      .section-heading h2 { font-size: 42px; }
+      .menu-grid { gap: 9px; }
+      .menu-card { min-height: 205px; padding: 19px 16px; }
+      .menu-card h3 { font-size: 21px; }
+      .menu-card p { font-size: 11px; }
+      .story { grid-template-columns: 1fr; gap: 38px; }
+      .story-visual { min-height: 380px; }
+      .story-photo { inset: 0 28px 25px 0; }
+      .story-stamp { width: 145px; min-height: 145px; }
+      .story-stamp strong { font-size: 25px; }
+      .story-copy h2 { font-size: 43px; }
+      .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+      .contact-copy h2 { font-size: 45px; }
+      .contact-card { padding: 18px; }
+      .footer { padding-bottom: 105px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; gap: 14px; }
+      .mobile-bar { position: fixed; z-index: 30; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: rgba(23,22,19,.96); backdrop-filter: blur(16px); }
+      .mobile-bar .btn { min-height: 46px; padding-inline: 10px; font-size: 10px; }
+    }
+    @media (max-width: 370px) {
+      .brand-text strong { font-size: 12px; }
+      .hero-buttons .btn { width: 100%; }
+      .menu-card { min-height: 195px; }
+      .menu-card h3 { font-size: 19px; }
+      .story-points { grid-template-columns: 1fr; gap: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-strip">İşletmeye özel web sitesi ön izlemesi · Menü ve görseller işletme onayıyla kesinleştirilecektir</div>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#anasayfa" aria-label="Adana Kebapçı Ali Serintürk ana sayfa">
+        <span class="brand-mark" aria-hidden="true">AS</span>
+        <span class="brand-text"><strong>Ali Serintürk</strong><span>Adana Kebap & Izgara</span></span>
+      </a>
+      <nav class="nav-links" id="main-nav" aria-label="Ana menü">
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#lezzetler">Lezzetler</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="tel:+905325273473">Bizi Arayın</a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="main-nav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Adana · Seyhan</div>
+          <h1>Adana kebabının<br><em>ateşten gelen</em><br>lezzeti.</h1>
+          <p class="hero-copy">Adana kebap ve ızgara lezzetleri için bize ulaşın. Konumumuzu kolayca bulun, telefonla bilgi alın ve sofranıza lezzet katın.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Adana%20Kebap%C3%A7%C4%B1%20Ali%20Serint%C3%BCrk%2C%20Selman-%C4%B1%20Pak%20K%C3%BClt%C3%BCr%20Merkezi%20kar%C5%9F%C4%B1s%C4%B1%2C%20Seyhan%2C%20Adana" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Yol Tarifi Al
+            </a>
+            <a class="btn btn-outline" href="tel:+905325273473">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.7L7.1 10a16 16 0 0 0 6 6l1.8-1.9a2 2 0 0 1 1.7-.6l2.8.5a2 2 0 0 1 1.6 1.9Z"/></svg>
+              Hemen Ara
+            </a>
+          </div>
+          <div class="hero-foot">Lezzet için doğru adres · Adana</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-info" aria-label="Öne çıkan bilgiler">
+      <div class="container quick-grid">
+        <div class="quick-item">
+          <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V9l6-5 6 5v11M9 12h6M9 16h6"/></svg></span>
+          <div><strong>Adana Kebap</strong><span>Adana mutfağından lezzetler</span></div>
+        </div>
+        <div class="quick-item">
+          <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c2 3 5 5 5 9a5 5 0 0 1-10 0c0-4 3-6 5-9Z"/><path d="M12 14c-1 1-1 2 0 3"/></svg></span>
+          <div><strong>Izgara Lezzetleri</strong><span>Köz ateşinin başrolde olduğu tatlar</span></div>
+        </div>
+        <div class="quick-item">
+          <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18M5 10l1 10h12l1-10M8 10V6a4 4 0 0 1 8 0v4M9 15h6"/></svg></span>
+          <div><strong>Paket Servis</strong><span>Detaylar için telefonla bilgi alın</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="lezzetler">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Lezzetlerimiz</div>
+          <h2>Adana mutfağının<br>kendine has tatları.</h2>
+          <p>Yorumlarda öne çıkan lezzetlerden bir seçki. Menü ve ürün detayları işletme tarafından onaylandığında bu alan güncellenecektir.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <span class="menu-number">01 / IZGARA</span>
+            <div><h3>Adana Kebap</h3><p>Adana mutfağının sevilen klasiklerinden.</p></div>
+          </article>
+          <article class="menu-card">
+            <span class="menu-number">02 / IZGARA</span>
+            <div><h3>Yağlı Kara</h3><p>Yorumlarda adı geçen yöresel lezzet.</p></div>
+          </article>
+          <article class="menu-card">
+            <span class="menu-number">03 / İÇECEK</span>
+            <div><h3>Ev Yapımı Şalgam</h3><p>Misafir yorumlarında beğeniyle anılıyor.</p></div>
+          </article>
+          <article class="menu-card">
+            <span class="menu-number">04 / İÇECEK</span>
+            <div><h3>Ev Yapımı Ayran</h3><p>Menüdeki güncel sunum için işletmeye danışın.</p></div>
+          </article>
+        </div>
+        <p class="menu-note">* Ürünler ziyaretçi yorumlarında anılan örneklerdir. Güncel menü, içerik ve fiyatlar için işletmeden teyit alınmalıdır.</p>
+      </div>
+    </section>
+
+    <section class="section" id="hakkimizda">
+      <div class="container story">
+        <div class="story-visual" aria-label="Köz üzerinde hazırlanan kebap sunum görseli">
+          <div class="story-photo" role="img" aria-label="Köz üzerinde pişen Adana kebap ve közlenmiş sebzeler"></div>
+          <div class="story-stamp"><strong>Adana</strong><span>Kebap kültürü</span></div>
+        </div>
+        <div class="story-copy">
+          <div class="eyebrow">Ali Serintürk</div>
+          <h2>Lezzetin yanında<br>samimi bir sofra.</h2>
+          <p>Adana kebabı ve ızgara lezzetleriyle ilgili bilgi almak, paket servis durumunu öğrenmek veya konumumuza ulaşmak için bizimle iletişime geçebilirsiniz.</p>
+          <p>Bu ön izleme, işletmenin dijital ortamda daha kolay bulunması ve ziyaretçilerin telefon, konum ve temel bilgilere hızlıca ulaşabilmesi için hazırlandı.</p>
+          <div class="story-points">
+            <div class="story-point">Adana mutfağı</div>
+            <div class="story-point">Kolay iletişim</div>
+            <div class="story-point">Mobil uyumlu tasarım</div>
+            <div class="story-point">Kolay yol tarifi</div>
+          </div>
+          <a class="btn btn-primary" href="#iletisim">Bize Ulaşın</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="iletisim">
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <div class="eyebrow">İletişim & Konum</div>
+          <h2>Bir telefon kadar<br>yakınız.</h2>
+          <p>Rezervasyon, paket servis ve güncel menü hakkında bilgi almak için doğrudan arayabilirsiniz. Yol tarifiyle konumumuza kolayca ulaşın.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="tel:+905325273473">Şimdi Ara</a>
+            <a class="btn btn-outline" href="https://wa.me/905325273473?text=Merhaba%2C%20men%C3%BC%20ve%20sipari%C5%9F%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.7L7.1 10a16 16 0 0 0 6 6l1.8-1.9a2 2 0 0 1 1.7-.6l2.8.5a2 2 0 0 1 1.6 1.9Z"/></svg></span>
+            <div><small>Telefon</small><strong>0532 527 34 73</strong><a class="inline-link" href="tel:+905325273473">Aramak için dokunun ↗</a></div>
+          </div>
+          <div class="contact-card">
+            <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><small>Adres / Konum</small><strong>Selmanı Pak Kültür Merkezi karşısı</strong><p>Güney Kuşak Bulvarı, metro güzergâhı · Seyhan / Adana</p><a class="inline-link" href="https://www.google.com/maps/search/?api=1&amp;query=Adana%20Kebap%C3%A7%C4%B1%20Ali%20Serint%C3%BCrk%2C%20Selman-%C4%B1%20Pak%20K%C3%BClt%C3%BCr%20Merkezi%20kar%C5%9F%C4%B1s%C4%B1%2C%20Seyhan%2C%20Adana" target="_blank" rel="noopener noreferrer">Haritada görüntüle ↗</a></div>
+          </div>
+          <div class="contact-card">
+            <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div><small>Çalışma saatleri</small><strong>Güncel saatleri arayarak öğrenin</strong><p>İşletme saatleri yayına alınmadan önce teyit edilmelidir.</p></div>
+          </div>
+          <p class="map-note">Adres ve iletişim bilgileri açık işletme kayıtlarından derlenmiştir; yayın öncesinde işletme sahibi tarafından doğrulanmalıdır.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">AS</span>
+        <span class="brand-text"><strong>Ali Serintürk</strong><span>Adana Kebap & Izgara</span></span>
+      </div>
+      <div class="footer-copy">© <span id="year">2026</span> Adana Kebapçı Ali Serintürk · Web sitesi ön izlemesi</div>
+      <div class="footer-links"><a href="#anasayfa">Yukarı çık ↑</a><a href="tel:+905325273473">İletişim</a></div>
+    </div>
+  </footer>
+
+  <div class="mobile-bar" aria-label="Hızlı iletişim">
+    <a class="btn btn-outline" href="tel:+905325273473">Ara</a>
+    <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Adana%20Kebap%C3%A7%C4%B1%20Ali%20Serint%C3%BCrk%2C%20Selman-%C4%B1%20Pak%20K%C3%BClt%C3%BCr%20Merkezi%20kar%C5%9F%C4%B1s%C4%B1%2C%20Seyhan%2C%20Adana" target="_blank" rel="noopener noreferrer">Yol Tarifi</a>
+  </div>
+
+  <script>
+    (() => {
+      const toggle = document.getElementById('menu-toggle');
+      const nav = document.getElementById('main-nav');
+      const year = document.getElementById('year');
+
+      if (year) year.textContent = String(new Date().getFullYear());
+
+      if (!toggle || !nav) return;
+
+      const closeMenu = () => {
+        nav.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Menüyü aç');
+      };
+
+      toggle.addEventListener('click', () => {
+        const willOpen = !nav.classList.contains('open');
+        nav.classList.toggle('open', willOpen);
+        document.body.classList.toggle('menu-open', willOpen);
+        toggle.setAttribute('aria-expanded', String(willOpen));
+        toggle.setAttribute('aria-label', willOpen ? 'Menüyü kapat' : 'Menüyü aç');
+      });
+
+      nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 720) closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
